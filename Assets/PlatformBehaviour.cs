@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlatformBehaviour : MonoBehaviour
 {
-
     public float speed;
     public bool toRight;
+    public GameObject baseder;
+    public GameObject baseizq;
+    public GameObject prefab1;
+    public GameObject prefab2;
+    int yOffset = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -27,14 +31,24 @@ public class PlatformBehaviour : MonoBehaviour
             transform.position -= new Vector3(speed, 0, 0);
         }
 
-        if (transform.position.x > 4)
+        if (transform.position.x > baseder.transform.position.x -1.5f)
         {
             toRight = false;
+            GameObject clone;
+            clone = Instantiate(prefab1);
+            clone.transform.position = baseder.transform.position + new Vector3(0, yOffset, 0);
+            yOffset++;
         }
         
-        if (transform.position.x < -4f )
+        if (transform.position.x < baseizq.transform.position.x + 1.5f)
         {
             toRight = true;
+            GameObject clone;
+            clone = Instantiate(prefab2);
+            clone.transform.position = baseizq.transform.position + new Vector3(0, yOffset, 0);
+            yOffset++;
         }
+
+
     }
 }

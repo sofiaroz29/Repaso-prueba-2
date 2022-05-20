@@ -460,6 +460,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   toRight: 0
+  baseder: {fileID: 207120116}
+  baseizq: {fileID: 1926335933}
+  prefab1: {fileID: 4997458571743300299, guid: 86b4daa5ad61a014c9c02da353908355, type: 3}
+  prefab2: {fileID: 7739956070597260549, guid: 46b94e30dbeca1e488a2261dbd816940, type: 3}
 --- !u!1 &1926335933
 GameObject:
   m_ObjectHideFlags: 0
